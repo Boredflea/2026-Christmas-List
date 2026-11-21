@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Gilded List — Christmas 2026</title>
+  <meta name="description" content="An extravagant front-end wishlist for Christmas 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <span class="brand__mark">✦</span>
+      <span>The Gilded List</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#list">The Collection</a>
+      <a href="#ranking">The Ranking</a>
+      <a href="#ritual">The Ritual</a>
+    </nav>
+    <div class="topbar__status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>Christmas 2026</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__ambient" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="eyebrow">Christmas 2026 · A Formal Request</p>
+        <h1 class="hero__title"><span>The</span> Gilded <em>List</em></h1>
+        <p class="hero__lede">Five objects of desire. Three tiers of longing. One extremely subtle hint aimed directly at the North Pole.</p>
+        <div class="hero__actions">
+          <a class="btn btn--gold" href="#list">Behold the list</a>
+          <button class="btn btn--ghost" type="button" id="copyList">Copy the list</button>
+          <button class="btn btn--ghost" type="button" id="printList">Print for Santa</button>
+        </div>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div><strong data-unit="days">00</strong><span>Days</span></div>
+          <div><strong data-unit="hours">00</strong><span>Hours</span></div>
+          <div><strong data-unit="minutes">00</strong><span>Minutes</span></div>
+          <div><strong data-unit="seconds">00</strong><span>Seconds</span></div>
+        </div>
+        <p class="hero__stamp">Sealed · Stamped · Slightly Unhinged</p>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <span>Santa's Desk</span>
+        <b>2026</b>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Want</span><i>✦</i><span>Need</span><i>✦</i><span>Shiny</span><i>✦</i><span>Dangerous</span><i>✦</i>
+          <span>Want</span><i>✦</i><span>Need</span><i>✦</i><span>Shiny</span><i>✦</i><span>Dangerous</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto reveal">
+      <p class="eyebrow">A Declaration of Taste</p>
+      <h2>Five objects.<br><em>Zero subtlety.</em></h2>
+      <p class="manifesto__copy">This is not a wishlist. It is a gilded invoice, a velvet-rope demand, and a polite warning that one of these items is a sword.</p>
+      <div class="stats">
+        <div><strong><span data-count="5">0</span></strong><span>Objects of Desire</span></div>
+        <div><strong><span data-count="3">0</span></strong><span>Tiers of Longing</span></div>
+        <div><strong><span data-count="100" data-suffix="%">0%</span></strong><span>Sheer Audacity</span></div>
+      </div>
+    </section>
+
+    <section class="list-section" id="list">
+      <div class="section-head reveal">
+        <p class="eyebrow">The Collection</p>
+        <h2>Choose your <em>obsession</em></h2>
+        <p>Filtered for maximum impact. Sorted by nothing but good taste and poor restraint.</p>
+      </div>
+      <div class="toolbar reveal">
+        <div class="filters" role="group" aria-label="Filter by tier">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All Treasures</button>
+          <button class="filter" type="button" data-filter="want" aria-pressed="false">Actually Want</button>
+          <button class="filter" type="button" data-filter="nice" aria-pressed="false">Nice To Have</button>
+          <button class="filter" type="button" data-filter="complain" aria-pressed="false">Wouldn't Complain</button>
+        </div>
+        <label class="search">
+          <span>Search the list</span>
+          <input id="search" type="search" placeholder="Gold, keys, shiny..." autocomplete="off">
+        </label>
+      </div>
+      <div class="catalog" id="catalog"></div>
+      <p class="empty" id="empty" hidden>No treasures match that search. Try something shinier.</p>
+    </section>
+
+    <section class="ranking" id="ranking">
+      <div class="section-head reveal">
+        <p class="eyebrow">The Ranking</p>
+        <h2>The <em>unofficial</em> podium</h2>
+        <p>Determined by volume of longing, shininess, and how hard one might argue for it.</p>
+      </div>
+      <p class="disclaimer">Demand levels are not accurate, not scientific, and are complete mumbo jumbo added strictly for dramatic effect.</p>
+      <div class="podium" id="podium"></div>
+    </section>
+
+    <section class="ritual" id="ritual">
+      <div class="ritual__intro reveal">
+        <p class="eyebrow">The Ritual</p>
+        <h2>How to <em>convince</em> Santa</h2>
+        <p>There is a process. It is entirely decorative. Please respect it.</p>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span>01</span><h3>Behold</h3><p>Study the collection. Admire the typography. Pretend this is normal.</p></li>
+        <li class="reveal"><span>02</span><h3>Copy</h3><p>Take the list with you. Paste it into a text, a note, or a suspiciously well-timed conversation.</p></li>
+        <li class="reveal"><span>03</span><h3>Await Glory</h3><p>Leave the list open on a nearby screen. Suggestively. Repeatedly. With confidence.</p></li>
+      </ol>
+    </section>
+
+    <section class="finale reveal">
+      <p class="eyebrow">Final Request</p>
+      <h2>Santa, <em>see this list.</em></h2>
+      <p>Five entries. One list. Zero plausible deniability. There is still time to make better choices.</p>
+      <button class="btn btn--gold btn--large" type="button" id="finalCopy">Copy the final list</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__credit">
+      <span class="footer__logo-frame">
+        <img src="assets/gavin-mills-logo.svg" alt="Gavin Mills logo">
+      </span>
+      <span>
+        <span class="footer__byline">Gavin Mills Production <span aria-hidden="true">©</span> 2026</span>
+        <span class="footer__whisper">an extravagant little list, meticulously assembled</span>
+      </span>
+    </div>
+    <p class="credits">
+      Images via Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Compound_action_wire_cutters.jpg" target="_blank" rel="noreferrer">cutters</a>,
+      <a href="https://commons.wikimedia.org/wiki/File:Schleifpapier_verschiedene_Sorten.jpg" target="_blank" rel="noreferrer">sandpaper</a>,
+      <a href="https://commons.wikimedia.org/wiki/File:Beautiful_Mechanical_Keyboard.jpg" target="_blank" rel="noreferrer">keyboard</a>,
+      <a href="https://commons.wikimedia.org/wiki/File:Gold_Ingots_on_white_background.jpg" target="_blank" rel="noreferrer">gold</a>,
+      <a href="https://commons.wikimedia.org/wiki/File:Albion_Kern_Medieval_Sword_08_(7312957284).jpg" target="_blank" rel="noreferrer">sword</a>.
+    </p>
+  </footer>
+
+  <dialog class="dossier" id="dossier" aria-labelledby="dossierTitle">
+    <button class="dossier__close" type="button" data-close-dossier aria-label="Close dossier">×</button>
+    <div class="dossier__inner" id="dossierContent"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
